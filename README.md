@@ -38,4 +38,27 @@
     echo $var
     exec 5>&-
 
-# Demoggification   
+# Variables 
+Variables are used to define a value that can be used in subsequent commands.
+    VARIABLE_NAME = VARIABLE_VALUE
+    echo $VARIABLE_NAME 
+
+# BASH FUNCTIONS 
+Its a way to group code in a logical way.
+    function name {
+        code
+     exit status
+    }
+    function hello {
+        echo "Hello World"
+    }
+    hello
+    quit 
+
+# ARRAYS 
+Multiple values are stored in an array.
+Number=(1 2 3 4 5)
+Number+= 9 #append 9 to the array
+echo ${Number[0]}
+echo ${Number[@]}
+echo ${#Number[*]} #length of array
