@@ -24,6 +24,7 @@
 
  # Redirecting I/O
  Redirecting stdout and stderr. 
+--------------------------------------------------------------------------------
     > file_name
     >> file_name  # append data to file
     < file_name
@@ -40,11 +41,13 @@
 
 # Variables 
 Variables are used to define a value that can be used in subsequent commands.
+--------------------------------------------------------------------------------
     VARIABLE_NAME = VARIABLE_VALUE
-    echo $VARIABLE_NAME 
-
+    echo $VARIABLE_NAME
+---------------------------------
 # BASH FUNCTIONS 
 Its a way to group code in a logical way.
+--------------------------------------------------------------------------------
     function name {
         code
      exit status
@@ -54,9 +57,10 @@ Its a way to group code in a logical way.
     }
     hello
     quit 
-
+--------------------------------------------------------------------------------
 # ARRAYS 
 Multiple values are stored in an array.
+--------------------------------------------------------------------------------
 Number=(1 2 3 4 5)
 Number+= 9 #append 9 to the array
 echo ${Number[0]}
