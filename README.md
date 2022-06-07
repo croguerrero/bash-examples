@@ -66,3 +66,4 @@ Number+= 9 #append 9 to the array
 echo ${Number[0]}
 echo ${Number[@]}
 echo ${#Number[*]} #length of array
+--------------------------------------------------------------------------------
