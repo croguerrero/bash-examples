@@ -61,9 +61,9 @@ Its a way to group code in a logical way.
 # ARRAYS 
 Multiple values are stored in an array.
 --------------------------------------------------------------------------------
-Number=(1 2 3 4 5)
-Number+= 9 #append 9 to the array
-echo ${Number[0]}
-echo ${Number[@]}
-echo ${#Number[*]} #length of array
+    Number=(1 2 3 4 5)
+    Number+= 9 #append 9 to the array
+    echo ${Number[0]}
+    echo ${Number[@]}
+    echo ${#Number[*]} #length of array
 --------------------------------------------------------------------------------
