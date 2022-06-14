@@ -67,3 +67,11 @@ Multiple values are stored in an array.
     echo ${Number[@]}
     echo ${#Number[*]} #length of array
 --------------------------------------------------------------------------------
+
+# Sustitution 
+    rpm -qf /usr/bin/bash
+    rpm -qf `wich yum`
+    rpm -qf $(which yum)
+    TIME = $(date +%H:%M:%S)
+# Process Sustitution
+    bash <(curl -s https://raw.githubusercontent.com/user/repo/master/script.sh)
