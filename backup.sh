@@ -12,9 +12,13 @@ init
 tail(){
     command tail -n $1
 }
-echo "Copying files to backup" && cp -r $BACKUP_LOG $BACKUP_TARGET >> $LOGFILE 2>&1 || echo "Error copying files"
- 
-grep -i denied  $LOGFILE | tail 2
+echo "Copying files to backup"
+cd $BACKUP_TARGET
 
+for i in $(ls)
+do
+    echo "Copying $i"
+    cp -v "$i" $BACKUP_TARGET/"i"-backup >> $LOGFILE 2>&1 
 
+grep -i denied  $BACKUP_TARGET/$LOGFILE | tail 2
 exit 127 

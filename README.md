@@ -75,3 +75,44 @@ Multiple values are stored in an array.
     TIME = $(date +%H:%M:%S)
 # Process Sustitution
     bash <(curl -s https://raw.githubusercontent.com/user/repo/master/script.sh)
+
+# Loops 
+ for i in $(ls); do
+    echo $i
+ done
+
+ for i in {1..10}; do
+    touch  file$i
+ done
+
+ while [ $i -le 10 ]; do
+    echo $i
+    i=$((i+1))
+ done
+
+ until [ $i -gt 10 ]; do
+    echo $i
+    i=$((i+1))
+ done
+
+ # SIGNALS
+ Programs in Linux are managed pratilly by signals from the kernel.
+
+ SIGINT: Interrupt
+ SIGKILL: Kill
+ SIGTERM: Terminate
+ SIGUSR1: User defined 1
+
+ # Heredocs 
+ A heredoc is a special type of redirection that allows you to pass multiple lines of input to a command.
+
+ cat << DELIMITER
+    This is a heredoc.
+    It is useful for passing multiple lines of input to a command.
+    DELIMITER
+
+# Herestring 
+ Is a pared-down version of heredoc.
+
+ command <<< "$WORD"
+ 
