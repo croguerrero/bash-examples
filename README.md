@@ -103,6 +103,14 @@ Multiple values are stored in an array.
  SIGTERM: Terminate
  SIGUSR1: User defined 1
 
+# Using Exit Status, Test and Built 
+    if ()
+    then 
+        command
+    else 
+        command
+    fi 
+    
  # Heredocs 
  A heredoc is a special type of redirection that allows you to pass multiple lines of input to a command.
 
@@ -116,3 +124,22 @@ Multiple values are stored in an array.
 
  command <<< "$WORD"
  
+ # Bash Builtins for Troubleshoot Problems 
+ set -x
+ set -u
+ set -e
+ # Aditional Builtins
+  - break: Breaks out of a loop.
+    - continue: Continues to the next iteration of a loop.
+    - readonly: Makes a variable readonly cannot be modified.
+If we put -x intialy on /bin/bash we can view how process code
+
+# What is REGEX 
+Regular expressions are a way to match or search patterns.
+# Regex Metacharacter
+ grep -E "^[0-9]+$"
+ grep -E '\<is\>|am' # <> is used for matching the word is or am  
+ grep -oE '\<is\>|am' super.txt 
+ grep -E '(B|C)AT' super.txt
+
+# Best Practices 
